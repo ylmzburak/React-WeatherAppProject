@@ -15,7 +15,7 @@ const WeatherApp = () => {
    useEffect(() => {
     const fetchDefaultWeather = async () => {
       const defaultLocation = 'Sinop'
-      const url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${defaultLocation}`
+      const url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${defaultLocation}`
       const res = await fetch(url)
       const defaultData = await res.json()
       setData(defaultData)
@@ -38,7 +38,7 @@ const WeatherApp = () => {
 
   const search = async() => {
     if(location.trim() !== ''){
-      const url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}`
+      const url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}`
       const res = await fetch(url)
       const searchData = await res.json()
       console.log(searchData)
